@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f4f0 !important; /* Soft eggshell color */
+    background-color: #white !important; /* Soft eggshell color */
     padding: 20px;
 }
 
@@ -103,10 +103,10 @@ a.invert:hover {
 .sticky-header {
     position: sticky;
     top: 0;
-    background-color: #f5f4f0;
+    background-color: #white;
     z-index: 1000;
     padding: 10px 15px;
-    border-bottom: 1px solid #f5f4f0;
+    border-bottom: 1px solid #white;
     margin: 0;
 }
 
@@ -281,4 +281,21 @@ h2.sticky-header {
     100% { transform: scale(1) rotateY(0deg); } /* Return to original position */
 }
 
+.devicon-java-plain-wordmark {
+    font-size: 60px;
+}
 
+.project-links {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.project-links:hover {
+    transform: scale(1.1); /* Scale up the link on hover */
+    color: #2828c1 !important;
+
+}
+
+.devicon-linux-plain {
+    font-size: 50px;
+}
