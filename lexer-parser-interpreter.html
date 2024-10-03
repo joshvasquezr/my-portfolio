@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lexer-Parser-Interpreter</title>
-
     <link rel="stylesheet" href="styles.css">
 
     <!-- Google fonts -->
@@ -17,25 +16,71 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!--Java-->
+    <!--Java and Linux icons-->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <!--Linux-->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-  <style>
-    header h1 {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
-  <div class="container mt-5 mb-5" style="max-width: 800px;">
-    <header>
-      <h1>
-        Lexer-Parser-Interpreter<span class="cursor"></span>
-      </h1>
-    </header>
-  </div>
+    <div class="container mt-5 mb-5" style="max-width: 800px;">
+        <header class="lexer-parser-interpreter">
+            <h1>
+                <i class="devicon-java-plain-wordmark colored"></i>
+                Lexer-Parser-Interpreter<span class="cursor"></span>
+
+            </h1>
+        </header>
+    </div>
+    <div class="container mt-5 mb-5" style="max-width: 800px;">
+        <ul class="list-unstyled">
+            <li class="mb-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Overview</h2>
+                        <div class="project-description">
+                            <p>Hey there! I’m Josh Vasquez, and I’m thrilled to share the Lexer-Parser-Interpreter Project with you. It’s all about making sense of SIMPLE code from a .txt file, and it does this through a few neat steps to ensure everything checks out perfectly.</p>
+                            <p>First up, we have <code>Lexer.java</code>. This little guy scans the text file and breaks it down into something called tokens. These tokens are pretty straightforward: IDTOKENs for strings that start with a letter, INTTOKENs for number strings, ASSNMTTOKENs for "=" showing assignments, PLUSTOKENs for "+" indicating addition, and EOFTOKENs—a dash "-" that tells us we've reached the end. Every file ends with an EOFTOKEN, just to keep things tidy.</p>
+                            <div class="video-container" style="display: flex; justify-content: center; align-items: center;">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/8HXgL726Oc0" title="Lexer Demo (1/3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <br>
+                            <p>Next, <code>Parser.java</code> jumps into the mix. It takes these tokens and decides if the SIMPLE code is playing by the rules. If everything’s good, it proudly declares "Valid Program." But if something's off, it'll tell you exactly what went wrong, where it happened, and calls it an "Invalid Program." It’s all about making sure we’re set for the next part without any hiccups.</p>
+                            <div class="video-container" style="display: flex; justify-content: center; align-items: center;">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/StRHpxmuxqM" title="Lexer Demo (2/3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <br>
+                            <p>The final piece of the puzzle is <code>ByteCodeInterpreter.java</code>. Let’s say our file "plain.txt" has the line <br>"x = 5 y = x + 6." <br>Parser turns that into a cool string of numbers, our bytecode, which looks like: <br>"1, 5, 2, 0, 0, 0, 1, 6, 2, 1." <br>ByteCodeInterpreter takes this, runs with it, and updates our memory spots to show the results of our operations—ending up with "5, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0." We start with a memory size of 10, but hey, adjust it as you need!</p>
+                            <div class="video-container" style="display: flex; justify-content: center; align-items: center;">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/meRfbLTnNqY" title="Lexer Demo (3/3)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <br>
+                            <p>Through this blend of lexical analysis, parsing, and interpretation, this project really digs into the nitty-gritty of the SIMPLE programming language, making sure each program is not only correct syntactically but also runs just right.</p>
+                            <p>If you’re curious to see how it all works or want to get your hands on the code, don’t hesitate to swing by my <a href="https://github.com/joshvasquezr/lexer-parser-interpreter-joshvasquezr" style="color: #2828c1 !important; text-decoration: underline !important;">GitHub</a> or shoot me a message via <a href="mailto:josh.vasquez.ruiz@gmail.com" style="color: #2828c1 !important; text-decoration: underline !important;">email</a> or <a href="https://www.linkedin.com/in/joshvasquezr" style="color: #2828c1 !important; text-decoration: underline !important;">LinkedIn</a>. Can’t wait to hear what you think!</p>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="container mt-5 mb-5" style="max-width: 800px;">
+            <div class="contact-links">
+
+                <a href="https://www.youtube.com/@joshuavasquez9019" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/joshvasquezr" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/joshvasquezr" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:josh.vasquez.ruiz@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
