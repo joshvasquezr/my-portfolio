@@ -1,16 +1,284 @@
-html, body {
-    height: 100%;
-}
-
-html {
-    display: table;
-    margin: auto;
-}
-
 body {
-    display: table-cell;
-    vertical-align: middle;
-    /* font-family: 'Lora', serif; */
-    /* font-family: 'Lora', serif; */
-    font-family: 'Roboto', sans-serif;
+    background-color: #f5f4f0 !important; /* Soft eggshell color */
+    padding: 20px;
 }
+
+/* Keyframes for the waving animation */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Add hover effect */
+.wave:hover {
+    animation: wave 0.5s ease-in-out infinite; /* Trigger the wave animation */
+    display: inline-block; /* Ensures the element animates correctly */
+}
+
+/* Animation for name hover */
+.invert:hover {
+    background-color: black; /* Change background to black */
+    color: white; /* Change text color to white */
+    padding: 0 5px; /* Add a little padding to make it look better */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+a.invert {
+    
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.invert:hover {
+    background-color: black; /* Change background to black */
+    color: white !important; /* Change text color to white */
+    padding: 0 5px; /* Add padding for better visual appearance */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Blinking cursor effect after the "engineer" text */
+.cursor::after {
+    content: "|"; /* Character used for cursor */
+    display: inline-block;
+    margin-left: 5px; /* Space between text and cursor */
+    animation: blink 1s step-end infinite; /* Blinking animation */
+    color: black; /* Cursor color */
+    font-weight: bold;
+}
+
+/* Keyframes for the hammer smash animation */
+@keyframes smash {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(30deg) scale(1.2); }
+    50% { transform: rotate(0deg) scale(1); }
+    75% { transform: rotate(-30deg) scale(1.2); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Hammer smash animation on hover */
+.smash:hover {
+    animation: smash 0.5s ease-in-out; /* Apply the smash animation */
+    display: inline-block; /* Ensure the element animates correctly */
+}
+
+
+.sticky-header {
+    position: sticky;
+    top: 0; /* Adjust this value based on your preference */
+    background-color: white; /* Set background color to match page background */
+    z-index: 1000; /* Ensure it appears above other elements */
+
+}
+
+
+
+/* Container adjustments */
+.container {
+    max-width: 800px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Styles */
+
+
+
+/* Sticky Header Styles */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #f5f4f0;
+    z-index: 1000;
+    padding: 10px 15px;
+    border-bottom: 1px solid #f5f4f0;
+    margin: 0;
+}
+
+
+/* Responsive Layout with Media Queries */
+@media (max-width: 768px) {
+    /* Adjust container for tablets and smaller screens */
+    .container {
+        padding: 10px;
+    }
+
+    /* Responsive font sizes for headers */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    /* Adjust padding and layout for sticky header */
+    .sticky-header {
+        padding: 10px;
+    }
+
+    /* Row and column adjustments for smaller screens */
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-8, .col-md-4 {
+        width: 100%; /* Make columns full-width */
+        text-align: left;
+    }
+
+    .col-md-4.text-end {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for small mobile screens */
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+    /* Padding and spacing adjustments */
+    .container {
+        padding: 5px;
+    }
+
+    .sticky-header {
+        padding: 8px;
+    }
+
+    li.mb-4 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Adjust the spacing around the h1 and h2 tags */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Reduce the bottom margin */
+}
+
+h2.sticky-header {
+    margin-top: 10px; /* Reduce the top margin to bring it closer */
+    margin-bottom: 15px; /* Optional: Reduce bottom margin if needed */
+    padding: 5px 0; /* Optional: Adjust padding for the sticky header */
+}
+
+/* Reduce spacing of the container elements */
+.container {
+    margin-top: 20px; /* Reduce top margin of the container */
+}
+
+.container.mt-5 {
+    margin-top: 30px !important; /* Override the Bootstrap margin-top class */
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center;
+    gap: 40px; /* Space between icons */
+    margin: 20px 0; /* Optional: Adjust spacing around the icons */
+    text-align: center; /* Center content within the div */
+}
+
+.contact-links h2 {
+    width: 100%;
+    text-align: center; /* Center the heading */
+}
+
+.contact-links a {
+    font-size: 45px; /* Keep large icon size */
+    transition: transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+.contact-links .fa-youtube {
+    color: #FF0000; /* YouTube Red */
+}
+
+.contact-links .fa-linkedin {
+    color: #0077B5; /* LinkedIn Blue */
+}
+
+.contact-links .fa-github {
+    color: #000000; /* GitHub Black */
+}
+
+.contact-links .fa-envelope {
+; /* Gmail Red */
+}
+
+
+/* Initial Style for the Icon */
+.sticky-header .book-collapse i {
+    font-size: 28px; /* Adjust font size as needed */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Animation */
+.sticky-header .book-collapse:hover i {
+    animation: pixarJump 0.8s ease-in-out; /* Trigger animation on hover */
+}
+
+/* Keyframe Animation for Pixar Lamp-like Jump and Tilt */
+@keyframes pixarJump {
+    0% { transform: translateY(0) rotate(0); }
+    20% { transform: translateY(-20px) rotate(-20deg); } /* Jump up and tilt left */
+    40% { transform: translateY(-20px) rotate(20deg); } /* Stay up and tilt right */
+    60% { transform: translateY(0) rotate(0); } /* Come back down and straighten */
+    80% { transform: translateY(-10px) rotate(-10deg); } /* Small bounce and tilt */
+    100% { transform: translateY(0) rotate(0); } /* Final position */
+}
+
+/* Initial Style for the Book Icon */
+.sticky-header .book-collapse {
+    display: inline-block; /* Ensure the emoji can animate */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Hover Animation */
+.sticky-header .book-collapse:hover {
+    animation: bookFlip 0.8s ease-in-out; /* Trigger the book flip animation */
+}
+
+/* Keyframe Animation for Book Flip Effect */
+@keyframes bookFlip {
+    0% { transform: scale(1) rotateY(0deg); } /* Start with normal size */
+    25% { transform: scale(1.1) rotateY(-15deg); } /* Slight enlarge and tilt left */
+    50% { transform: scale(1.2) rotateY(15deg); } /* Maximum size and tilt right */
+    75% { transform: scale(1.1) rotateY(-10deg); } /* Shrink back down and tilt left */
+    100% { transform: scale(1) rotateY(0deg); } /* Return to original position */
+}
+
+
