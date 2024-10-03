@@ -299,3 +299,33 @@ h2.sticky-header {
 .devicon-linux-plain {
     font-size: 50px;
 }
+
+header .lexer-parser-interpreter .home-link {
+    color: #666 !important; /* Soft dark grey for subtle visibility */
+    text-decoration: none !important; /* Remove underline to keep it clean */
+    font-size: 14px !important; /* Smaller font for a minimalistic look */
+    padding: 8px 16px !important; /* Sufficient padding without being bulky */
+    background-color: transparent !important; /* No background for a minimalist button */
+    border: none !important; /* No borders */
+    transition: color 0.3s ease !important; /* Smooth transition for hover effects */
+}
+
+header .lexer-parser-interpreter .home-link:hover {
+    color: #333 !important; /* Slightly darker grey on hover for a subtle interaction cue */
+}
+
+header .lexer-parser-interpreter .home-link .arrow {
+    display: inline-block !important;
+    margin-right: 5px !important;
+    transition: transform 0.3s ease-in-out !important;
+    color: #666 !important; /* Match the link color for consistency */
+}
+
+header .lexer-parser-interpreter .home-link:hover .arrow {
+    transform: translateX(-5px) !important; /* Adds a small animation on hover */
+}
+
+
+
+
+
